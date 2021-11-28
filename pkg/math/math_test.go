@@ -6,6 +6,13 @@ import (
 	assert "github.com/stretchr/testify/assert"
 )
 
+type MathMock struct {
+}
+
+func (m *MathMock) Plus(a int, b int) int {
+	return 0
+}
+
 func TestSum(t *testing.T) {
 	math := &Math{}
 	assert.Equal(t, 4, math.Plus(2, 2))
